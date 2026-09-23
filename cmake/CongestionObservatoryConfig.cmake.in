@@ -1,0 +1,16 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+find_dependency(Threads)
+
+if(WIN32)
+  # The transport layer links Winsock; exported targets carry the dependency transitively.
+  set(CONGESTION_OBSERVATORY_WINSOCK_AVAILABLE TRUE)
+endif()
+
+include("${CMAKE_CURRENT_LIST_DIR}/CongestionObservatoryTargets.cmake")
+
+set(CongestionObservatory_VERSION "@PROJECT_VERSION@")
+set(CongestionObservatory_LIBRARIES CongestionObservatory::congestion_observatory)
+
+check_required_components(CongestionObservatory)

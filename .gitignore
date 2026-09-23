@@ -1,0 +1,44 @@
+# Build trees
+/build/
+/build-*/
+/out/
+/install/
+/artifacts/
+CMakeUserPresets.json
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+*.obj
+*.o
+*.pdb
+*.ilk
+*.idb
+*.exp
+*.lib
+*.dll
+*.exe
+*.so
+*.dylib
+*.a
+
+# Editor / OS noise
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+Thumbs.db
+Desktop.ini
+*.swp
+*~
+
+# Runtime debris (must never be committed)
+*.log
+*.tmp
+*.crdump
+core.*
+crash-*
+*.snapshot.tmp
+run/
